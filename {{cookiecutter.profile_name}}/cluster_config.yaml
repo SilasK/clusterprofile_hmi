@@ -5,7 +5,7 @@
 
 # default parameter for all rules
 __default__:
-  #queue: normal
+  queue: {{default_queue}}
   nodes: 1
 
 
