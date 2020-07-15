@@ -25,7 +25,7 @@ To deploy this profile,
 
     mkdir -p ~/.config/snakemake
     cd ~/.config/snakemake
-    cookiecutter https://github.com/metagenome-atlas/clusterprofile.git
+    cookiecutter https://github.com/silask/clusterprofile_hmi.git
 
 
 Then, you can run atlas on a cluster with
