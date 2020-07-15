@@ -23,9 +23,10 @@ pbs:
 lsf:
   command: "bsub"
   key_mapping:
+    queue: "-q {}"
     name: "-J {}"
     threads: "-n {}"
-    mem: "-M {}000000"
+    mem: '-R "rusage[mem={}000]"'
     account: "-P {}"
     nodes: "-C {}"
 
