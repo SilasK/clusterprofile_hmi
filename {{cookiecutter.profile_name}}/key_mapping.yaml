@@ -27,7 +27,6 @@ lsf:
     threads: "-n {}"
     mem: "-M {}000000"
     account: "-P {}"
-    queue: "-q {}"
     nodes: "-C {}"
 
 
