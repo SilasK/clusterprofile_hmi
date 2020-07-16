@@ -4,7 +4,7 @@
 import sys, os
 from subprocess import Popen, PIPE
 import yaml
-import re
+
 
 def eprint(*args, **kwargs):
     print(*args, file=sys.stderr, **kwargs)
@@ -68,7 +68,8 @@ else:
     res= output.decode("utf-8")
 
     if system=='lsf':
-        match = re.search(r"Job <(\d+)> is submitted", response_stdout)
+        import re
+        match = re.search(r"Job <(\d+)> is submitted", res)
         jobid = match.group(1)
 
     elif system=='pbs':
