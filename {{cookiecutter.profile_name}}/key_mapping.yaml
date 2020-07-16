@@ -21,7 +21,7 @@ pbs:
     mem: "-l mem={}gb"
     time: "-l walltime={}00" #min= seconds x 100
 lsf:
-  command: "bsub"
+  command: "bsub -e lsf_%J.log -o lsf_%J.log"
   key_mapping:
     queue: "-q {}"
     name: "-J {}"
