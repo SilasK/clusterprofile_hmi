@@ -11,7 +11,7 @@ jobid = sys.argv[1]
 
 out= subprocess.run(['bjobs','-noheader',jobid],stdout=subprocess.PIPE).stdout.decode('utf-8')
 
-state = out.sep()[2]
+state = out.split()[2]
 
 
 map_state={"PEND":'running',
