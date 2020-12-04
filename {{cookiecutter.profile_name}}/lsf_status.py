@@ -19,7 +19,7 @@ for i in range(STATUS_ATTEMPTS):
         break; # If sucessful go out of for loop
            
     except sp.CalledProcessError as e:
-        logger.error("sacct process error")
+        logger.error(f"CLUSTER: can't get status for job {jobid}")
         logger.error(e)
            
         if i >= STATUS_ATTEMPTS - 1:
